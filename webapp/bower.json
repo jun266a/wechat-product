@@ -1,0 +1,23 @@
+{
+  "name": "wechat-product",
+  "homepage": "https://github.com/jun266a/wechat-product",
+  "authors": [
+    "jun266a <jun266a@foxmail.com>"
+  ],
+  "description": "基于微信",
+  "main": "app.js",
+  "keywords": [
+    "wechat"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
+}
