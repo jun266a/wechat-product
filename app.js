@@ -2,7 +2,8 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-//const router = express.Router();
+
+const routeCategories = require('./routes/routeCategories')
 
 let app = express();
 
@@ -12,8 +13,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static('./webapp'));
 
 //路由处理
-
-
+app.use('/categories',routeCategories);
 
 app.listen(80,function(err){
 	if(err){
