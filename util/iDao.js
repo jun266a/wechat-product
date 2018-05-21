@@ -21,6 +21,10 @@ let baseDao = {
 		let selectSql = 'SELECT * FROM ' + this.TABLE +' WHERE ?';
 		this.query(selectSql,values,callback);
 	},
+	all : function(callback){
+		let selectSql = 'SELECT * FROM ' + this.TABLE ;
+		this.query(selectSql,null,callback);
+	},
 	update : function(values,callback){
 		//TODO update的偏差错误
 		let updateSql = 'UPDATE ' + this.TABLE +' SET ? ';
