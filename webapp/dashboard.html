@@ -18,6 +18,9 @@
 	    	.main{
 	    		padding-top: 50px;
 	    	}
+	    	.block{
+	    		display : block;
+	    	}
 	    </style>
 	</head>
 	<body ng-app="main">
@@ -42,14 +45,14 @@
 					<div class="row">
 						<ul class="nav nav-pills nav-stacked">
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home" aria-hidden="true"> 产品管理</li>
-						  	<li role="presentation" class="active"><a href="#/catalogue" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 产品列表</a></li>
-						  	<li role="presentation"><a href="#/newProdu " role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> 产品添加</a></li>
-						  	<li role="presentation"><a href="#/users" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 用户管理</a></li>
+						  	<li role="presentation" class="active"><a href="#/catalogue"  > <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 产品列表</a></li>
+						  	<li role="presentation"><a href="#/newProdu "  > <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> 产品添加</a></li>
+						  	<li role="presentation"><a href="#/users"  > <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 用户管理</a></li>
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home" aria-hidden="true"> 系统管理</li>
-						  	<li role="presentation"><a href="#/settings" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 系统设置</a></li>
-						  	<li role="presentation"><a href="#/categories" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 分类列表</a></li>
-						  	<li role="presentation"><a href="#/newCategory" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> 分类添加</a></li>
-						  	<li role="presentation"><a href="#/admin" role="tab" data-toggle="tab"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 角色管理</a></li>
+						  	<li role="presentation"><a href="#/settings"  > <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 系统设置</a></li>
+						  	<li role="presentation"><a href="#/categories"  > <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 分类列表</a></li>
+						  	<li role="presentation"><a href="#/newCategory"  > <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> 分类添加</a></li>
+						  	<li role="presentation"><a href="#/admin"  > <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 角色管理</a></li>
 						</ul>
 					</div>
 				</div>
@@ -66,7 +69,9 @@
 		</div>
 		<script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceCompany.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/service/serviceCategory.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/controllerCategories.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/controllerNewProdu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/controllerNewCategory.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
