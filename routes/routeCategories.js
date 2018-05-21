@@ -7,7 +7,6 @@ const categoryDao = require('../dao/categoryDao');
 
 router.post('/insert',function(req,res){
 	categoryDao.select(req.body,function(results){
-		console.log('length '+results.length);
 		if(!results.length){
 			categoryDao.insert(req.body,function(results){
 				res.writeHead(200);   
