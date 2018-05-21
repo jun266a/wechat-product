@@ -10,6 +10,7 @@ let iMysql = {
 		DATABASE : 'FORWECHAT',
 	},
 	VIEWS : {
+		CATALOGUE : 'catalogue'
 	},
 	TABLES : {
 		ADMIN : 'admin',
