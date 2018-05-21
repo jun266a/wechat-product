@@ -5,7 +5,7 @@ const router = express.Router();
 
 const categoryDao = require('../dao/categoryDao');
 
-router.post('/addcategories',function(req,res){
+router.post('/insert',function(req,res){
 	categoryDao.select(req.body,function(results){
 		console.log('length '+results.length);
 		if(!results.length){
@@ -16,6 +16,32 @@ router.post('/addcategories',function(req,res){
 		}else{
 			res.writeHead(200); 
 			res.end('不成功');
+		}
+	});
+});
+router.post('/all',function(req,res){
+	categoryDao.all(function(results){
+		if(results.length){
+			res.writeHead(200);   
+			res.end(JSON.stringify(results));
+		}else{
+			res.writeHead(200); 
+			res.end('不成功');
+		}
+	});
+});
+router.post('/update',function(req,res){
+	categoryDao.select({id :req.body.id},function(results){
+		if(results.length){
+			categoryDao.update(req.body,function(results){
+				if(results.length){
+					res.writeHead(200);   
+					res.end(JSON.stringify(results));
+				}else{
+					res.writeHead(200); 
+					res.end('不成功');
+				}
+			});
 		}
 	});
 });
