@@ -16,7 +16,8 @@ let iMysql = {
 		PRODUCT : 'product',
 		CATEGORY : 'category',
 		USER : 'user',
-		SUBSCRIBE : 'subscribe'
+		SUBSCRIBE : 'subscribe',
+		COMPANY : 'company'
 	},
 	query : function sqlback(querySql,values,callback){
 		//2.获取和数据库的链接
