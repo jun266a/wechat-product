@@ -8,6 +8,7 @@
     		}
     	};
 		this.get = function(){
+			companies = [];
 			$http.post('/companies/all')
 			.success(function(data,status,header,config){
 				angular.forEach(data,function (item) {
@@ -16,7 +17,6 @@
 						name : item.name
 					});
 				});
-				console.log('companies'+companies);
 			});
 			return companies;
 		};

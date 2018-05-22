@@ -8,7 +8,9 @@
 		});
 	}]);
 	app.controller('controllerCategories',['$scope','serviceCategory',function($scope,serviceCategory){
-		$scope.categories = serviceCategory.get();
+		
+		$scope.categories =  serviceCategory.get();
+			
 		$scope.invoke = function(id){
 			//弹出模态框--控制模态框的展示displayBlock，浮动到页面最上层和背景灰化
     		$scope.modal = true;
