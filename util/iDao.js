@@ -27,7 +27,7 @@ let baseDao = {
 	},
 	update : function(values,callback){
 		//TODO update的偏差错误
-		let updateSql = 'UPDATE ' + this.TABLE +' SET ? ';
+		let updateSql = 'REPLACE ' + this.TABLE +' SET ? ';
 		this.query(updateSql,values,callback);
 	}
 };

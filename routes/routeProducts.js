@@ -32,6 +32,23 @@ router.post('/all',function(req,res){
 		}
 	});
 });
-router.post('/update',function(req,res){});
+router.post('/update',function(req,res){
+	console.log(req.body);
+	productDao.select({id :req.body.id},function(results){
+		if(results.length){
+			productDao.update(req.body,function(results){
+				console.log(results);
+				if(results){
+					res.writeHead(200);   
+					res.end('成功');
+				}else{
+					res.writeHead(200); 
+					res.end('不成功');
+				}
+			});
+		}
+	});
+
+});
 
 module.exports = router;
