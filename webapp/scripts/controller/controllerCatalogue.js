@@ -18,9 +18,19 @@
 		'serviceCompany',
 		'serviceProduct',
 		function($scope,serviceCategory,serviceCompany,serviceProduct){
+			$scope.type = "item.id";
+    		$scope.reverse = false;
 			$scope.catalogue = serviceProduct.get();
 			$scope.categories = serviceCategory.get();
 			$scope.companies = serviceCompany.get();
+			$scope.orderType = function(value){
+			    if($scope.type == value){
+			        $scope.reverse = !$scope.reverse;
+			    }else{
+			        $scope.type = value;
+			        $scope.reverse = false;
+			    }
+			};
 			$scope.invoke = function(id){
 				//弹出模态框--控制模态框的展示displayBlock，浮动到页面最上层和背景灰化
 	    		$scope.modal = true;
