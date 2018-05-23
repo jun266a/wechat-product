@@ -4,7 +4,7 @@
 		$routeProvider
 		.when('/newCategory',{
 			controller:'controllerNewCategory',
-			templateUrl:'./views/panelNewCategory.html'
+			templateUrl:'./views/dashboard/panelNewCategory.html'
 		});
 	}]);
 	app.controller('controllerNewCategory',['$scope','serviceCategory',function($scope,serviceCategory){
@@ -12,5 +12,5 @@
 			console.log(name);
 			serviceCategory.put(name);
 		};
-	}]);
+	}]); 
 })(angular);

@@ -4,7 +4,7 @@
 		$routeProvider
 		.when('/categories',{
 			controller:'controllerCategories',
-			templateUrl:'./views/panelCategories.html'
+			templateUrl:'./views/dashboard/panelCategories.html'
 		});
 	}]);
 	app.controller('controllerCategories',['$scope','serviceCategory',function($scope,serviceCategory){
@@ -14,7 +14,7 @@
 		$scope.orderType = function(value){
 		    if($scope.type == value){
 		        $scope.reverse = !$scope.reverse;
-		    }else{
+		    }else{ 
 		        $scope.type = value;
 		        $scope.reverse = false;
 		    }

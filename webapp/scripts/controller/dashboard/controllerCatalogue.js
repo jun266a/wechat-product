@@ -9,9 +9,9 @@
 		$routeProvider
 		.when('/catalogue',{
 			controller:'controllerCatalogue',
-			templateUrl:'./views/panelCatalogue.html'
+			templateUrl:'./views/dashboard/panelCatalogue.html'
 		});
-	}]);
+	}]); s
 	app.controller('controllerCatalogue',[
 		'$scope',
 		'serviceCategory',
