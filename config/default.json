@@ -1,10 +1,11 @@
 {
   "domain": "xxxxxxxx.com",
   "is_debug": true,
-  "mongodb": {
-    "host": "127.0.0.1",
-    "port": "27017",
-    "db": "node-webot"
+  "mysql": {
+	  "HOST" : "127.0.0.1",
+	  "USER" : "root",
+	  "PASSWORD" : "123",
+	  "DATABASE" : "FORWECHAT"
   },
   "sms": {
     "host": "127.0.0.1",

@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static('./webapp'));
 
 //路由处理
-app.use('/categories',routeCategories);
-app.use('/companies',routeCompanies);
-app.use('/products',routeProducts);
 app.use('/admin',routeAdmin);
+app.use('/products',routeProducts);
+app.use('/companies',routeCompanies);
+app.use('/categories',routeCategories);
 
 app.listen(80,function(err){
 	if(err){

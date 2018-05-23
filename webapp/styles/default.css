@@ -1,0 +1,11 @@
+.sidebar{             
+	position: fixed;  
+	left: 0;          
+	top: 50px;        
+}                     
+.main{                
+	padding-top: 50px;
+}                     
+.block{               
+	display : block;  
+}                     

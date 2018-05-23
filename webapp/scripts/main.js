@@ -18,4 +18,10 @@
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider.otherwise({redirectTo:'/newProdu'});
 	}]);
+	app.controller("navCtrl",["$scope","$location",function ($scope,$location) {
+        $scope.$location = $location;
+        $scope.$watch("$location.path()",function (now, old) {
+            $scope.path = now;
+        })
+    }]);
 })(angular);

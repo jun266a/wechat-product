@@ -9,21 +9,10 @@
 	
 	    <!-- Bootstrap -->
 	    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-		<style type="text/css">
-	    	.sidebar{
-	    		position: fixed;
-	    		left: 0;
-	    		top: 50px;
-	    	}
-	    	.main{
-	    		padding-top: 50px;
-	    	}
-	    	.block{
-	    		display : block;
-	    	}
+	    <link rel="stylesheet" type="text/css" href="styles/default.css"/>
 	    </style>
 	</head>
-	<body ng-app="main">
+	<body ng-app="main" ng-controller="navCtrl">
 	    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		  	<div class="container-fluid">
 		  		<div class="navbar-header col-lg-2">
@@ -45,14 +34,14 @@
 					<div class="row">
 						<ul class="nav nav-pills nav-stacked">
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home" > 产品管理</li>
-						  	<li role="presentation" class="active"><a href="#/catalogue"  > <span class="glyphicon glyphicon-stats"  ></span> 产品列表</a></li>
-						  	<li role="presentation"><a href="#/newProdu "  > <span class="glyphicon glyphicon-transfer"  ></span> 产品添加</a></li>
-						  	<li role="presentation"><a href="#/order"  > <span class="glyphicon glyphicon-user"  ></span> 订单管理</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/catalogue')}"><a href="#/catalogue"  > <span class="glyphicon glyphicon-stats"  ></span> 产品列表</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/newProdu')}"><a href="#/newProdu "  > <span class="glyphicon glyphicon-transfer"  ></span> 产品添加</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/order')}"><a href="#/order"  > <span class="glyphicon glyphicon-user"  ></span> 订单管理</a></li>
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home"  > 系统管理</li>
-						  	<li role="presentation"><a href="#/settings"  > <span class="glyphicon glyphicon-cog"  ></span> 系统设置</a></li>
-						  	<li role="presentation"><a href="#/categories"  > <span class="glyphicon glyphicon-stats"  ></span> 分类列表</a></li>
-						  	<li role="presentation"><a href="#/newCategory"  > <span class="glyphicon glyphicon-transfer"  ></span> 分类添加</a></li>
-						  	<li role="presentation"><a href="#/admin"  > <span class="glyphicon glyphicon-user"  ></span> 角色管理</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/settings')}"><a href="#/settings"  > <span class="glyphicon glyphicon-cog"  ></span> 系统设置</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/categories')}"><a href="#/categories"  > <span class="glyphicon glyphicon-stats"  ></span> 分类列表</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/newCategory')}"><a href="#/newCategory"  > <span class="glyphicon glyphicon-transfer"  ></span> 分类添加</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/admin')}"><a href="#/admin"  > <span class="glyphicon glyphicon-user"  ></span> 角色管理</a></li>
 						</ul>
 					</div>
 				</div>
