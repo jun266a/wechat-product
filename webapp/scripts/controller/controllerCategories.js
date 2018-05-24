@@ -2,6 +2,10 @@
 	var app = angular.module('module.controller.categories',['ngRoute','module.service.category']);
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider
+		.when('/cate',{
+			controller:'controllerCategories',
+			templateUrl:'./views/index/panelCategory.html'
+		})
 		.when('/categories',{
 			controller:'controllerCategories',
 			templateUrl:'./views/dashboard/panelCategories.html'

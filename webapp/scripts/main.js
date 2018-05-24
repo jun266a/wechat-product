@@ -4,7 +4,8 @@
 		'module.controller.newCategory',
 		'module.controller.newProdu',
 		'module.controller.categories',
-		'module.controller.catalogue'
+		'module.controller.catalogue',
+		'module.controller.order'
 	]);
 //	app.run(['$rootScope','$state',function($rootScope,$state){
 //		$rootScope.$on('$stateChangeStart',function(event,toState){
@@ -16,7 +17,7 @@
 //	  	});
 // 	}]);
 	app.config(['$routeProvider', function($routeProvider){
-		$routeProvider.otherwise({redirectTo:'/newProdu'});
+		$routeProvider.otherwise({redirectTo:'/catalogue'});
 	}]);
 	app.controller("navCtrl",["$scope","$location",function ($scope,$location) {
         $scope.$location = $location;

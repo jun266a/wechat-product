@@ -7,22 +7,28 @@
 	]);
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider
+		.when('/cata/:param',{
+			controller:'controllerCatalogue',
+			templateUrl:'./views/index/panelCatalogue.html',
+		})
 		.when('/catalogue',{
 			controller:'controllerCatalogue',
 			templateUrl:'./views/dashboard/panelCatalogue.html'
 		});
-	}]); s
+	}]);
 	app.controller('controllerCatalogue',[
 		'$scope',
+		'$routeParams',
 		'serviceCategory',
 		'serviceCompany',
 		'serviceProduct',
-		function($scope,serviceCategory,serviceCompany,serviceProduct){
+		function($scope,$routeParams,serviceCategory,serviceCompany,serviceProduct){
 			$scope.type = "item.id";
     		$scope.reverse = false;
 			$scope.catalogue = serviceProduct.get();
 			$scope.categories = serviceCategory.get();
 			$scope.companies = serviceCompany.get();
+			$scope.selector = $routeParams.param;
 			$scope.orderType = function(value){
 			    if($scope.type == value){
 			        $scope.reverse = !$scope.reverse;
