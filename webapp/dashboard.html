@@ -36,7 +36,7 @@
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home" > 产品管理</li>
 						  	<li role="presentation" ng-class="{active:path.startsWith('/catalogue')}"><a href="#/catalogue"  > <span class="glyphicon glyphicon-stats"  ></span> 产品列表</a></li>
 						  	<li role="presentation" ng-class="{active:path.startsWith('/newProdu')}"><a href="#/newProdu "  > <span class="glyphicon glyphicon-transfer"  ></span> 产品添加</a></li>
-						  	<li role="presentation" ng-class="{active:path.startsWith('/order')}"><a href="#/order"  > <span class="glyphicon glyphicon-user"  ></span> 订单管理</a></li>
+						  	<li role="presentation" ng-class="{active:path.startsWith('/orders')}"><a href="#/orders"  > <span class="glyphicon glyphicon-shopping-cart"  ></span> 订单列表</a></li>
 						  	<li class="list-group-item list-group-item-info"> <span class="glyphicon glyphicon-home"  > 系统管理</li>
 						  	<li role="presentation" ng-class="{active:path.startsWith('/settings')}"><a href="#/settings"  > <span class="glyphicon glyphicon-cog"  ></span> 系统设置</a></li>
 						  	<li role="presentation" ng-class="{active:path.startsWith('/categories')}"><a href="#/categories"  > <span class="glyphicon glyphicon-stats"  ></span> 分类列表</a></li>
@@ -60,11 +60,13 @@
 		<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/service/serviceProduct.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/service/serviceCompany.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceOrder.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/service/serviceCategory.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/controllerOrder.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/controllerCatalogue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/controllerCategories.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/controller/controllerNewProdu.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/controller/controllerNewCategory.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/dashboard/controllerNewProdu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/dashboard/controllerNewCategory.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

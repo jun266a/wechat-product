@@ -15,6 +15,7 @@
 				compId : values.company.id,
 				name : values.name,
 				price : values.price,
+				image : values.image,
 				content : values.content
 			})
 			.success(function(res){

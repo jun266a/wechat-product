@@ -18,6 +18,7 @@
 					});
 				});
 			});
+			console.log(companies);
 			return companies;
 		};
 	}]);
