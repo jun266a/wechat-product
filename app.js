@@ -3,10 +3,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const routeCategories = require('./routes/routeCategories');
-const routeCompanies = require('./routes/routeCompanies');
-const routeProducts = require('./routes/routeProducts');
+const routeCart = require('./routes/routeCart');
 const routeAdmin = require('./routes/routeAdmin');
+const routeProducts = require('./routes/routeProducts');
+const routeCompanies = require('./routes/routeCompanies');
+const routeCategories = require('./routes/routeCategories');
 
 let app = express();
 
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static('./webapp'));
 
 //路由处理
+app.use('/carts',routeCart);
 app.use('/admin',routeAdmin);
 app.use('/products',routeProducts);
 app.use('/companies',routeCompanies);

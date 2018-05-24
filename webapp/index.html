@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>index</title>
+	    <!-- Bootstrap -->
+	    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	    <style type="text/css">
+	    	body{
+	    		background-image: url(images/bg_030.jpg);
+	    		background-size: 100%;
+	    	}
+	    	.main{
+	    		margin: 70px 20px 0;
+	    		background-image: url(images/bg_030.jpg);
+	    		background-size: 100%;
+	    	}
+	    </style>
+	</head>
+	<body ng-app="wechat">
+		<div ng-view></div>
+		<script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceCart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/index/controllerIndex.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/index/controllerAbout.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/index/controllerCart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/index/controllerMessage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function(angular){
+				var app = angular.module('wechat',[
+					'ngRoute',
+					'module.controller.index',
+					'module.controller.about',
+					'module.controller.message',
+					'module.controller.cart'
+				]);
+				app.config(['$routeProvider', function($routeProvider){
+					$routeProvider.otherwise({
+						redirectTo:'/index'
+					});
+				}]);
+			})(angular);	
+		</script>
+		
+	</body>
+</html>

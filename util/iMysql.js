@@ -10,14 +10,14 @@ let iMysql = {
 		DATABASE : 'FORWECHAT',
 	},
 	VIEWS : {
-		CATALOGUE : 'catalogue'
+		CATALOGUE : 'catalogue',
+		CARTS : 'carts'
 	},
 	TABLES : {
 		ADMIN : 'admin',
 		PRODUCT : 'product',
 		CATEGORY : 'category',
 		USER : 'user',
-		SUBSCRIBE : 'subscribe',
 		COMPANY : 'company'
 	},
 	query : function sqlback(querySql,values,callback){
