@@ -1,0 +1,37 @@
+<div role="tabpanel" class="tab-pane">
+	<div class="col-lg-12 page-header">
+		<blockquote > 订单列表</blockquote>
+	</div>
+	<form class="form-horizontal" role="search">
+		<div class="form-group">
+		    <label for="order" class="col-sm-2 control-label">订单搜索</label>
+		    <div class="col-sm-10">
+				<input type="text" class="form-control" id="order" placeholder="关键字" ng-model="selector">
+		    </div>
+		</div>
+	</form>
+	<div class="col-sm-offset-2 col-sm-10 ">
+		<div class="row">
+			<table class="table table-striped">
+				<thead>
+				  	<tr >
+				  		<th ng-click="orderType('item.id')">订单编号</th>
+				  		<th ng-click="orderType('item.name')">产品名称</th>
+				  		<th ng-click="orderType('item.userId')">用户</th>
+				  		<th ng-click="orderType('item.quantity')">产品数量</th>
+				  		<th ng-click="orderType('item.price')">产品价格</th>
+				  	</tr>
+				</thead>
+				<tbody>
+				  	<tr ng-repeat="item in orders |orderBy : type : reverse| filter : {name : selector}">
+				  		<td>{{item.id}}</td>
+				  		<td>{{item.name}}</td>
+				  		<td>{{item.userId}}</td>
+				  		<td>{{item.quantity}}</td>
+				  		<td>{{item.price}}</td>
+				  	</tr>
+				</tbody>
+			</table>				
+		</div>
+	</div>
+</div>

@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const routeCart = require('./routes/routeCart');
+const routeOrder = require('./routes/routeOrder');
 const routeAdmin = require('./routes/routeAdmin');
 const routeProducts = require('./routes/routeProducts');
 const routeCompanies = require('./routes/routeCompanies');
@@ -15,9 +15,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
 //app.use(cookieParser());
 app.use(express.static('./webapp'));
+app.use(express.static('./upload'));
 
 //路由处理
-app.use('/carts',routeCart);
+app.use('/orders',routeOrder);
 app.use('/admin',routeAdmin);
 app.use('/products',routeProducts);
 app.use('/companies',routeCompanies);

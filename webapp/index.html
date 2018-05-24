@@ -13,8 +13,12 @@
 	    		background-image: url(images/bg_030.jpg);
 	    		background-size: 100%;
 	    	}
-	    	.main{
+	    	.index{
 	    		margin: 70px 20px 0;
+	    		background-image: url(images/bg_030.jpg);
+	    		background-size: 100%;
+	    	}
+	    	.main{
 	    		background-image: url(images/bg_030.jpg);
 	    		background-size: 100%;
 	    	}
@@ -24,11 +28,20 @@
 		<div ng-view></div>
 		<script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/service/serviceCart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceOrder.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/index/controllerIndex.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/index/controllerAbout.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/controller/index/controllerCart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/controllerOrder.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/controller/index/controllerMessage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceCart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/index/controllerCart.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="scripts/service/serviceCategory.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/controllerCategories.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="scripts/service/serviceCompany.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/service/serviceProduct.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/controller/controllerCatalogue.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			(function(angular){
 				var app = angular.module('wechat',[
@@ -36,7 +49,10 @@
 					'module.controller.index',
 					'module.controller.about',
 					'module.controller.message',
-					'module.controller.cart'
+					'module.controller.order',
+					'module.controller.categories',
+					'module.controller.catalogue',
+					'module.controller.cart'					
 				]);
 				app.config(['$routeProvider', function($routeProvider){
 					$routeProvider.otherwise({
@@ -45,6 +61,5 @@
 				}]);
 			})(angular);	
 		</script>
-		
 	</body>
 </html>
