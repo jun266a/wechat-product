@@ -8,27 +8,17 @@
 		<div class="panel-body">
 			<table class="table table-condensed">
 				<thead>
-					<th ng-click="orderType('id')">#</th>
-					<th ng-click="orderType('name')">名称</th>
+					<th ng-click="orderType('id')">订单编号</th>
+					<th ng-click="orderType('name')">产品名称</th>
 					<th ng-click="orderType('quantity')">数量</th>
 					<th ng-click="orderType('price')">单价</th>
 					<th>总价</th>
 				</thead>
 				<tbody>
-					<tr ng-repeat="item in carts">
+					<tr ng-repeat="item in orders">
 						<td>{{item.id}}</td>
 						<td>{{item.name}}</td>
-						<td style="width: 35%;">
-							<div class="input-group">
-								<span class="input-group-btn">
-							    	<button class="btn btn-info" type="button" ng-click="decrease(item.id)"> - </button>
-							  	</span>
-							  	<input type="text" class="form-control" ng-model="item.quantity" >
-							 	<span class="input-group-btn">
-							    	<button class="btn btn-info" type="button" ng-click="increase(item.id)"> + </button>
-							  	</span>
-							</div>
-						</td>
+						<td>{{item.quantity}}</td>
 						<td><span >{{item.price}}</span></td>
 						<td><span >{{item.total = item.quantity * item.price}}</span></td>
 					</tr>
@@ -36,8 +26,8 @@
 				<tfoot>
 					<tr>
 						<td></td>
-						<td>总数</td>
-						<td><span >{{quantity()}}</span></td>
+						<td></td>
+						<td></td>
 						<td>总付款</td>
 						<td><span >{{total()}}</span></td>
 					</tr>

@@ -1,0 +1,25 @@
+<div class="panel main">
+	<div class="panel-heading">
+		<div class="panel-title">
+			<h4 class="text-center">产品列表</h4>
+		</div>
+	</div>
+	<div class="panel-body">
+		<p>
+			<input type="text" class="form-control" ng-model="selector" placeholder="关键字搜索"/>
+		</p>
+		<ul class="media-list">
+			<li class="media" ng-repeat="item in catalogue | filter:selector">
+				<div class="media-left media-middle">
+					<a href="#" class="pull-left">
+						<img src="{{item.image}}" class="media-object " width="80" height="80"/>
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">{{item.name}}</h4>
+					<p>{{item.company.name}}</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
